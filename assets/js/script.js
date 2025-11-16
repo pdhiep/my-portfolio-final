@@ -148,6 +148,8 @@ function showProjects(projects) {
 
 fetchData().then(data => {
     showSkills(data);
+}).catch(error => {
+    console.error("Error loading skills:", error);
 });
 
 fetchData("projects").then(data => {
